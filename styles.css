@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    background-color: rgb(250, 199, 220);
+    line-height: 1.5;
+    color: #fff;
+    
+}
+
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkblue);
+    background-image: linear-gradient(
+        115deg,
+        rgba(231, 45, 154, 0.466),
+        rgba(247, 80, 197, 0.938),
+        rgba(79, 98, 202, 0.938)
+        
+      ),
+      url(https://scontent-gru1-2.xx.fbcdn.net/v/t39.30808-6/260824088_106892051825818_6411821481219146016_n.jpg?_nc_cat=100&cb=99be929b-3346023f&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeH0rTnPixi9KDwErh6at-dZLFns8W8VJXwsWezxbxUlfDlhMusfEmQ6YELcYH06LNK5yc-Q_oehZ1UY3OO8jP78&_nc_ohc=6W_WRNQWINwAX-ufD4m&_nc_oc=AQm6vuDN-cjG340cAVhjURT6SQM4tqxOeis5j_ZePdys1q2lfpp94mxOfARgFjWIzHE&_nc_ht=scontent-gru1-2.xx&oh=00_AfAG-NlysebgEd5JqaebOJcvzAdRrhfDEv3KD1VmP2Tlmg&oe=6491779D);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+
+h1, p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+form {
+    background: var(--color-darkblue-alpha);
+    padding: 1.5rem 0.625rem;
+    border-radius: 0.25rem;
+ }
+
+  
+  .form-group {
+    margin: auto;
+    max-width: 500px;
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    height: 2.3rem;
+    padding: 0.4rem 0.7rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.5rem;
+  min-height: 1.2rem;
+  min-width: 1.2rem;
+}
+
+.input-textarea {
+    min-height: 100px;
+    width: 100%;
+    padding: 1.625rem;
+    resize: horizontal;
+  }
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--color-darkblue);
+    color: inherit;
+    border-radius: 4px;
+    cursor: pointer;
+  }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa Churros Duas Marias</title>
+</head>
+<body>
+    <h1 id="title">Pesquisa dos Churros Duas Marias</h1>
+    <p id="description">Nós queremos conhecer melhor você, para podermos definir nossos próximos sabores.</p>
+    <form id="survey-form">
+        <div class="form-group">
+            <label for="name" id="name-label">Nome:</label>
+            <input type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Digite seu nome"
+            required>            
+        </div>
+        <div class="form-group">
+            <label for="email" id="email-label">Email:</label>
+            <input type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Digite seu e-mail"
+            required>
+        </div>
+        <div class="form-group">
+            <label for="number" id="number-label">Idade:         
+            </label>
+            <input type="number"
+            name="age"
+            type="number"
+            class="form-control"
+            min="10"
+            max="99"
+            placeholder="Digite sua idade"
+            required>
+        </div>
+        <div class="form-group">
+            <label for="referrer" id="referrer-label">Como você ficou sabendo da gente?</label>
+            <select name="dropdown" id="referrer" class="form-control" required>
+                <option disabled selected value="">Escolha uma opção</option>
+                <option value="carrinho">No carrinho na rua</option>
+                <option value="redesocial">Pelas redes sociais</option>
+                <option value="recomendar">Recomendação de terceiros</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>Você recomendaria os churros para um amigo?</p>
+            <label for="certeza">
+                <input type="radio"
+                name="user-recommend"
+                value="com-certeza"
+                class="input-radio"
+                checked>
+                Com certeza!
+            </label>
+            <label for="talvez">
+                <input type="radio"
+                name="user-recommend"
+                value="talvez"
+                class="input-radio">
+                Talvez
+            </label>
+            <label for="nao">
+                <input type="radio"
+                name="user-recommend"
+                value="nao-sei"
+                class="input-radio">
+                Não sei
+            </label>
+        </div>
+        <div class="form-group">
+            <p>Qual o seu sabor favorito?</p>
+            <select name="mostlike" id="most-like" class="form-control" required>
+                <option disabled selected value>Selecione um sabor</option>
+                <option value="docedeleite">Doce de leite</option>
+                <option value="brigadeiro">Brigadeiro</option>
+                <option value="nutella">Nutella</option>
+                <option value="misto">Misto de doce de leite com brigadeiro</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>Qual especial do mês você gostaria de experimentar?</p>
+            <span class="clue">(Escolha todos que gostar)</span>
+            <label for="checkbox"><input type="checkbox"
+                value="laka-oreo"
+                name="prefer"
+                class="input-checkbox">Laka e Óreo
+            </label>
+            <label for="checkbox"><input type="checkbox"
+                value="alpino"
+                name="prefer"
+                class="input-checkbox">Alpino com Ovomaltine
+            </label>
+            <label for="checkbox"><input type="checkbox"
+                value="romeu"
+                name="prefer"
+                class="input-checkbox">Romeu e Julieta
+            </label>
+        </div>
+        <div class="form-group">
+            <p>Deixe aqui a sua sugestão</p>
+            <textarea name="comment" id="comments" 
+            cols="30" rows="10" placeholder="Deixe sua sugestão aqui"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="submit" class="submit-button" onclick="obrigado()">
+              Submit
+            </button>
+        </div>
+    </form>
+    <script>function obrigado(){
+        const btn1 = document.getElementById('submit');
+        btn1.addEventListener('click', () => {
+            alert('Obrigada!');
+        });
+    }</script>
+</body>
+</html>
